@@ -48,8 +48,9 @@ x = zeros(n, 1);
 %
 %
 
-% Hope this is not very "clumzy" solution
-x = arrayfun(@(i) ~isempty(word_indices(word_indices==i)), 1:n);
+for i = 1:n
+    x(i) = ~isempty(word_indices(word_indices==i));
+end
 
 % =========================================================================
     
